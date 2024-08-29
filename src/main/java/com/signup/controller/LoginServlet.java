@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", user);
             response.sendRedirect("main_page.jsp");
         } else {
-            request.setAttribute("message", "Invalid credentials!");
+            request.setAttribute("errorMessage", "Invalid credentials!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }

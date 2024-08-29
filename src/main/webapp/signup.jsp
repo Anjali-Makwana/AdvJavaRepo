@@ -1,5 +1,5 @@
-<!-- signup.jsp -->
 <%@ include file="header.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="container mt-4">
     <h2>User Sign Up</h2>
    <form action="RegisterServlet" method="post" onsubmit="return validateForm()">
