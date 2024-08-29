@@ -54,6 +54,9 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+         <c:if test="${not empty message}">
+            <div class="alert alert-danger mt-3">${message}</div>
+        </c:if>
 </div>
 
 <script>

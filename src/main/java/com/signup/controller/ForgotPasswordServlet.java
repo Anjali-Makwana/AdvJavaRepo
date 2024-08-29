@@ -44,6 +44,7 @@ public class ForgotPasswordServlet extends HttpServlet {
 
             try {
                 sendOtpEmail(email, otp);
+                request.setAttribute("email", email);
                 request.setAttribute("message", "OTP has been sent to your email.");
                 request.getRequestDispatcher("verify_otp.jsp").forward(request, response);
             } catch (MessagingException e) {
@@ -61,7 +62,7 @@ public class ForgotPasswordServlet extends HttpServlet {
     private void sendOtpEmail(String recipientEmail, String otp) throws MessagingException {
         // Sender's email credentials
         final String senderEmail = "makwanaanjali331@gmail.com";
-        final String senderPassword = "123456";
+        final String senderPassword = "meou yyfb deep xqyx";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");

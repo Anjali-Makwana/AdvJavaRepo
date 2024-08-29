@@ -17,5 +17,7 @@
 	<classpathentry kind="lib" path="C:/Users/Anjali Makwana/Downloads/javax.mail.jar/javax.mail.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Anjali Makwana/Downloads/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Anjali Makwana/Downloads/activation.jar/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anjali Makwana/Downloads/jstl.jar/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anjali Makwana/Downloads/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

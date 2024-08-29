@@ -14,7 +14,7 @@
                 <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ChangePasswordServlet">Change Password</a>
+                <a class="nav-link" href="change_password.jsp">Change Password</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="LogoutServlet">Logout (${user.email})</a>

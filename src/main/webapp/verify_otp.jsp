@@ -9,6 +9,7 @@
     <div class="container">
         <h2>Verify OTP</h2>
         <form action="VerifyOtpServlet" method="post">
+         <input type="hidden" name="email" value="${param.email}">
             <div class="form-group">
                 <label for="otp">Enter OTP:</label>
                 <input type="text" class="form-control" id="otp" name="otp" required>

@@ -20,7 +20,9 @@ public class VerifyOtpServlet extends HttpServlet {
         String email = (String) session.getAttribute("email");
 
         if (generatedOtp != null && generatedOtp.equals(enteredOtp)) {
-            response.sendRedirect("new_password.jsp");
+        	request.setAttribute("email", email);
+        	request.getRequestDispatcher("new_password.jsp").forward(request, response);
+           // response.sendRedirect("new_password.jsp");
         } else {
             request.setAttribute("message", "Invalid OTP. Please try again.");
             request.getRequestDispatcher("verify_otp.jsp").forward(request, response);

@@ -3,6 +3,7 @@ package com.signup.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.signup.model.User;
 import com.signup.utils.DbConnection;
@@ -95,6 +96,34 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return user;
+    }
+    
+    public User getUserByEmail(String email) {
+        User user = null;
+
+        String query = "SELECT * FROM student WHERE email = ?";
+        try (Connection conn = DbConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setFirstName(rs.getString("first_name"));
+                user.setLastName(rs.getString("last_name"));
+                user.setEmail(rs.getString("email"));
+                user.setMobile(rs.getString("mobile"));
+                user.setAddress(rs.getString("address"));
+                user.setGender(rs.getString("gender"));
+                user.setPassword(rs.getString("password"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return user;
     }
 }
